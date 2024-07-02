@@ -122,7 +122,7 @@ main{
 }
 
 .main-2 > div.login-container{
-  max-width: 520px;
+  max-width: 1800px;
   max-height: 520px;
   border: 1 solid gray;
   display: flex;
@@ -132,10 +132,11 @@ main{
 }
 .login-container {
   background-color: #fff;
-  padding: 20px;
+  padding: 10px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 300px;
+  width: 500px;
+  height: 450px;
 }
 
 .login-form {
@@ -150,6 +151,7 @@ main{
 }
 
 .form-group {
+  border: 0;
   margin-bottom: 15px;
 }
 
@@ -159,13 +161,14 @@ main{
 }
 
 .form-group input {
+  width: 400px;
   padding: 10px;
   font-size: 1em;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
 
-button[type="submit"] {
+.login-form button[type="submit"] {
   padding: 10px;
   font-size: 1em;
   background-color: #007bff;
@@ -180,6 +183,7 @@ button[type="submit"]:hover {
 }
 
 .login-links {
+  border: 0;
   margin-top: 10px;
   text-align: center;
 }
