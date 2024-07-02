@@ -1,0 +1,92 @@
+*{
+  /* width/height 값이 content + (padding*2) + (border*2) 값이 되도록 content 값을 자동계산
+      -> 개발자가 생각하는대호 요소 크기를 설정할 수 있게 함.*/
+  box-sizing: border-box;
+}
+
+.box{
+  width: 100px;
+  height: 100px;
+  background-color: bisque;;
+}
+
+.border{
+  /* 상하좌우 10px 실선, 검정색 테두리 영역 설정 */
+  border : 10px solid black;
+}
+
+/* content(내용) 영역 */
+.content{
+  width: 150px;
+  height: 150px;
+
+/* width/height 설정값이 contant 영역에만 적용되게 설정 */
+  box-sizing: content-box;
+}
+
+/* padding(채우기) 영역 */
+.padding{
+  width: 200px;
+  height: 200px;
+
+  /* 상하좌우 contant~border 사이 20px */
+  padding: 20px;  
+}
+
+/* margin(여백) 영역 */
+.margin-1{
+  /* 상하좌우 50px 여백을 둠 */
+  margin: 50px;
+}
+
+.margin-2{
+  margin: 100px;
+}
+
+/* 방향성 확인하기 */
+.test1{
+  padding-top: 10px;
+  padding-bottom: 20px;
+  padding-left: 30px;
+  padding-right: 40px;
+  
+  margin-top: 30px;
+  margin-bottom: 50px;
+  margin-left: 0px;
+  margin-right: 200px;
+
+  border-top: 5px solid red;
+  border-bottom: 3px dotted black;
+  border-left: 10px dashed brown;
+  border-right: 15px double purple;
+}
+
+/* 크기 한번에 지정하기 */
+.test2{
+  padding : 20px 10px 10px 40px;
+  border-width : 5px 10px 15px 20px;
+  margin : 50px 75px 100px 125px;
+}
+
+/* margin : auto 테스트 */
+
+.container{
+  width: 300px;
+  height: 300px;
+  border: 3px solid black
+}
+
+.test3{
+  margin: auto;
+  margin-top : 97px;
+}
+
+/* .test3 > span{
+  text-align: center;
+}  불가XXXX */
+
+/* 글자, inline 요소 가운데 정렬은 감싸고 있는(부모요소) 요소에 text-aline 속성을 추가한다. */
+.test3{
+  text-align: center;
+}
+

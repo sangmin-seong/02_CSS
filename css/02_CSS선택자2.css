@@ -1,0 +1,141 @@
+strong{
+  font-size: 18px;
+  color:steelblue;
+  text-decoration: underline;
+  font-family: 맑은고딕;
+}
+
+code{
+  background-color: #f5e7b2;
+  display: block;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* 기본속성 선택자 */
+/* 선택자 [속성명=속성값] {} */
+
+/* 모든 div 중 name 값이 'name1'인 요소만 선택 */
+div[name=name1]{background-color: yellowgreen;}
+div[name=name2]{background-color: coral;}
+
+/* 임의의 속성 선택 */
+p[qwer=test1]{background-color: pink;}
+p[qwer=test2]{background-color: midnightblue;}
+
+/* 자식 선택자 (A>B)  */
+/* 클래스가 parent-1 요소의 한단계 아래의 모든 li태그 */
+.parent-1>li{
+font-size: 20px;
+}
+
+.child-1{background-color: yellow;}
+.parent-1>.child-1{background-color: maroon;}
+
+.parent-1>li>span{background-color: red;}
+
+/* 후손 선택자 */
+
+/* class가 parent-2인 요소의 후손 중 모든 p 태그 */
+.parent-2 p{background-color: lightblue;}
+
+.parent-2 div{
+  background-color: blue;
+padding : 10px}
+
+.parent-2 > div *{
+  color : yellow !important;
+  font-size: 40px;
+}
+
+/* 상태 선택자 :focus */
+
+.input-1:focus{
+  outline-color:green;
+  background-color: lightgreen;
+}
+
+/* :checked */
+.input-2:checked{
+  width: 30px;
+  height : 30px;
+  scale : 0.8;
+  /* radio/checkbox 와 같이 체크 시 표시되는 것은 이미지이기에 배경 및 색상 변경 CSS 적용되지 않는다 
+  (일부 되는 브라우저가 있음.)*/
+}
+
+/* 상태선택자 :enabled / :disabled */
+
+.input-3:enabled{background-color: goldenrod;}
+.input-3:disabled{background-color: darkslateblue;}
+
+
+/* 반응선택자 */
+
+.test-box{
+  width : 50px;
+  height: 50px;
+  border : 10px solid black;
+  cursor : pointer; /* 마우스 포인터 손가락 모양 */
+}
+
+/* 마우스 커서가 올라갔을 때 */
+.test-box:hover{
+  background-color: yellow;
+}
+
+/* 요소를 클릭하고 있을 때 */
+.test-box:active{
+  background-color: hotpink;
+  border-style : inset;
+  scale : 0.9;
+}
+
+/* 동위 선택자 */
+
+/* A + B : A 바로 뒤에 있는 형제요소 B 하나 선택 */
+
+/* #div1 요소 바로 뒤에있는 div 선택하기 */
+#div1 + div{
+  background-color: dimgray;
+}
+#div4 + p{
+  background-color: olive;
+}
+
+/* A ~ B : A 뒤에 존재하는 모든 B를 선택 */
+
+#div1 ~ div{
+  font : ;
+  font-size: 70px;
+  font-weight: bold;
+}
+
+#div3 ~ div{
+  background-color: yellow;
+}
+
+
+/* 체크박스 꾸미기 */
+
+/* 1. label 요소를 체크박스모양으로 만들기 */
+#check1 + label{
+  width: 15px;
+  height: 15px;
+  border: 1px solid #ccc;
+  display: inline-block;
+  cursor: pointer;
+  /* 모서리 곡률 지정 */
+  border-radius: 4px;
+  /* 사용자가 블럭 처리를 못하게 함 */
+  user-select : none;
+}
+
+/* 2. #check1이 체크 되었을 때 label의 배경 이미지 변경 */
+#check1:checked + label{
+  background-image: url('../images/checkbox.png');
+  background-size : cover;
+}
+
+/* 3. 체크박스를 존재는 하지만 보이지 않게 처리 */
+#check1{display: none;}

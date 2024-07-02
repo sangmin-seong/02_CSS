@@ -1,0 +1,87 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+div, header, main, footer, section{border: 1px solid black;}
+
+body{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+/* 헤더 부분 */
+header{
+  height: 60px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.header-1{ 
+  width: 100px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header-2{width: 50px;}
+.header-3{
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.header-3 > div:first-child{
+  flex-grow: 6;
+}
+.header-3 > div:last-child{
+  flex-grow: 2;
+}
+.header-3 > div:nth-child(2){
+  flex-grow: 2;
+}
+
+
+
+/* 메인 부분 */
+main{
+  flex-grow: 1;
+  background-color: #CCC;
+
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+
+.content-1{ 
+  height:  160px;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+
+}
+.content-2{height: 290px;
+           display: flex;
+           flex-direction: row;
+           justify-content: center;
+ }
+
+.content-3{flex-grow: 1;}
+
+
+/* 푸터 부분 */
+footer{
+  height: 100px;
+}
+
+footer > section{
+  height: 50%;
+}
+
+
+

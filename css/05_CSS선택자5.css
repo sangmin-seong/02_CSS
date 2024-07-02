@@ -1,0 +1,44 @@
+/* only-child */
+
+/* #test1의 유일한 자식이 p태그인 경우 */
+#test1 > p:only-child{
+  background-color: orange;
+}
+
+/* #test2의 유일한 자식이 p태그인 경우 */
+#test2 > p:only-child{
+background-color: red;
+}
+
+/* test3 예하 p 태그가 유일할 때 */
+#test3 > p:only-of-type{
+  background-color: pink;
+}
+
+/* test3 예하 pre 태그가 유일할 때 */
+#test3 > pre:only-of-type{
+  background-color: greenyellow;
+}
+
+/* :empty */
+
+/* #test4 예하 중 노드(내용 등 작성여부)가 없는 요소 선택 */
+#test4 > p:empty{
+  height: 30px;
+  background-color: green;
+}
+
+#test5-1,.test5-2, pre[name='test5-3']{
+  font-size: 24;
+  font-weight: bold;
+  font-family: '돋움';
+  border-bottom: 2px dashed gray;
+}
+
+.test6 {background-color: yellow;}
+
+.aaa { font-size: 30px;}
+
+.test6.aaa{
+  color: red;
+}

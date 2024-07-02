@@ -1,0 +1,54 @@
+/* 2순위 inline-style */
+/* html 문서 내 태그명에 자체 스타일 적용 */
+
+/* 3순위 아이디 선택자 */
+#test1{
+  /* 낮은우선순위, 덮어씌움 */
+  height: 100px;
+  color: red;
+  background-color: skyblue;
+  /* 새로 추가된 속성(누적) */
+  font-family: '궁서';
+  font-weight: bold;
+}
+
+
+/* 4순위 클래스 선택자 */
+.cls1{
+  /* 태그명 보다 우선순위가 높음 */
+  background-color: green;
+  /* 똑같은 속성에 대해 설정한 적이 없으면 그대로 적용(누적) */
+  color: white;
+}
+
+
+
+/* 5순위 태그 선택자 */
+div{
+  width: 200px;
+  height: 200px;
+  background-color: yellow;
+}
+
+div{
+  /* 동일한 선택자 다수 사용 가능 */
+  border: 1px solid black;
+}
+
+div{
+  /* 같은 우선 순위인 경우, 마지막 설정 적용 */
+  background-color: grey;
+}
+#test1{
+  /* 같은 !important 작성, 순위에 따른 우선 적용 */
+  background-color: pink !important;
+}
+div{
+  /* !important 작성, 5순위 -> 1순위 변경 */
+  background-color:crimson !important;
+}
+
+div{
+  /* !important로 같은 순위면, 마지막에 작성한 것이 적용 */
+  background-color: steelblue !important;
+}

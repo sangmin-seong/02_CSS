@@ -1,0 +1,60 @@
+/* CSS 파일은 <style> 내부와 동일 */
+
+/* id가 test1인 요소를 선택 */
+#test1{color:hotpink; /*글자색*/
+       font-weight: bold; /*글자굵기*/
+      font-size: 20px; /*글자크기*/}
+
+
+/* id(#) 선택자 */
+#li1{background-color: #667bc6;}
+
+#li2{background-color: #FFB4C2;}
+
+#li3{background-color: #DA7297;}
+
+
+/* 태그 선택자 */
+
+strong{
+  font-size: 18px;
+  font-family: "고딕";
+  color : #219c90;
+}
+
+code{
+  background-color: darkgray;
+  display: block;
+  font-weight:bold;
+  font-family: "휴먼명조";  
+}
+
+/* class(.) 선택자 */
+
+.class-test1{
+  background-color: black;
+  color:white;
+}
+
+.class-test2{
+  background-color: yellow;
+  color:red;
+}
+
+/* 한 요소에 여러 클래스 작성하기 */
+.bg-green{background-color: green;}
+.font-pink{color:pink;}
+
+/* 웹 폰트 적용 */
+@font-face {
+  font-family: 'ONE-Mobile-POP';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/ONE-Mobile-POP.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* 모든 요소(*) 선택자 */
+
+* {
+  font-family: 'ONE-Mobile-POP';
+}

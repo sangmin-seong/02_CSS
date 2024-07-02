@@ -1,0 +1,129 @@
+/* 전체 화면 설정 */
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+div, header, main, footer, section{border: 1px solid black;}
+
+/* 영역 나누기 */
+body {
+ display: flex;
+ flex-direction: column;
+ min-height: 100vh;
+}
+
+/* 3개 영역별 크기 지정 */
+header{
+  height: 170px;
+
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;   
+}
+
+/* header 부분 영역 분할 */
+.up{
+  box-sizing: border-box;
+  height: 120px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.up > section{
+  width: 100vw;  
+}
+
+strong{
+  font-size: 40px;
+  font-family: "휴먼명조";
+}
+
+.fulldown{
+  height: 50px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.fulldown > p{
+  padding-top: 8px;
+  font-size: 20px;
+  font-weight: bold;
+  color: gray;
+}
+
+main{
+ height: 1825px;
+
+ display: flex;
+ flex-direction: column;
+}
+/* main 부분 영역 분할 */
+.main-1{
+  height: 780px;
+}
+.main-1 > img{
+  width: 100vw;
+  height: 780px;
+}
+
+.main-2{
+  height: 520px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 30px;
+}
+.main-2 > div{
+  height: 450px;
+  width : 95%;
+  border: 1px solid gray;
+  border-radius: 30px;
+}
+
+.main-3{
+  height: 520px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 30px;
+}
+
+.main-3 > div{
+  height: 450px;
+  width : 95%;
+  border: 1px solid gray;
+  border-radius: 30px;
+}
+
+footer{
+  height: 645px;
+  
+  display: block;
+  
+}
+
+footer > .footer-1{
+  height: 322.5px;
+
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+
+}
+
+footer > .footer-2{
+  height: 322.5px;
+}
+
+
+
+
+
+
+
